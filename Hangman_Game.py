@@ -1,12 +1,14 @@
 import random, time
 
+
+
 def play_again():
     answer = input('Would you like to play again? yes/no: ').lower()
     if answer == 'y' or answer == 'yes':
         play_game()
 
     elif answer == 'n' or answer == 'no':
-        print("Thanks for PLaying!")
+        print("Thanks for Playing!")
         time.sleep(2)
         exit()
     else:
@@ -37,7 +39,7 @@ def play_game  ():
     tries = 10
     guessed = False
 
-    print('the word contains ', len(word), ' letters.')
+    print('The word contains ', len(word), ' letters.')
     print(len(word) * '*')
 
     while guessed == False and tries > 0:
@@ -56,6 +58,7 @@ def play_game  ():
             elif guess in word:
                 print("Good Job, You guessed a letter!")
                 letters_guessed.append(guess)
+
             else:
                 print("How did you even get this message? Go away!")
 
@@ -77,6 +80,7 @@ def play_game  ():
             play_again()
         elif tries == 0:
             print("You are out of tries, better luck next time!")
+            print("The word was: ", word)
           
     
     play_again()
